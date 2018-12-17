@@ -64,8 +64,25 @@ var app7 = new Vue({
     }
 });
 
-var data = {a: 1};
-var vm = new Vue({
-    data: data
+var obj = {
+    foo: 'bar'
+};
+//  Object.freeze(obj);
+new Vue({
+    el: '#app-8',
+    data: obj
 });
-console.log(data.a === vm.a);
+
+new Vue({
+    el: '#app-9',
+    data: {
+        rawHtml: '<span style="color: red">red</span>'
+    }
+});
+
+new Vue({
+    el: '#app-10',
+    data: {
+        isButtonDisabled: true
+    }
+})
