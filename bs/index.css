@@ -9,3 +9,24 @@ body {
     padding-top: 51px;
 }
 
+.navbar-inverse input[type='text'] {
+    color: #999;
+    border: none;
+    background: #333;
+}
+
+.navbar-inverse button[type='submit'] {
+    color: #999;
+    border: none;
+    background: none;
+}
+
+.navbar-inverse form {
+    position: relative;
+}
+
+.navbar-inverse .glyphicon-search {
+    position: absolute;
+    top: 27%;
+    right: 10px;
+}
