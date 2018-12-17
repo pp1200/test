@@ -32,15 +32,24 @@
     </div>
     <div id="app-7">
         <ol>
-            <todo-item 
-                v-for="item in groceryList"
-                v-bind:todo="item"
-                v-bind:key="item.id">
+            <todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id">
             </todo-item>
         </ol>
     </div>
+    <div id="app-8">
+        <p>{{ foo }}</p>
+        <!-- 这里的 `foo` 不会更新！ -->
+        <button v-on:click="foo = 'baz'">Change it</button>
+    </div>
+    <div id="app-9">
+        <p>Using mustaches: {{ rawHtml }}</p>
+        <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+    </div>
+    <div id="app-10">
+        <button v-bind:disabled="isButtonDisabled">Button</button>
+    </div>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    <script src="./node_modules/vue/dist/vue.js"></script>
     <script src="index.js"></script>
 </body>
 
